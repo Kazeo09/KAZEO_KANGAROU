@@ -6,6 +6,31 @@
   <title>KAZEO DESIGN</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
   <style>
+    /* Lightbox Popup */
+#lightbox {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+#lightbox img {
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 10px;
+  box-shadow: 0 0 20px #000;
+  animation: zoomIn 0.3s ease;
+}
+
+@keyframes zoomIn {
+  from { transform: scale(0.7); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
     * {
       margin: 0;
       padding: 0;
@@ -88,31 +113,7 @@
     .gallery img:hover {
       transform: scale(1.05);
     }
-  </style/* Lightbox Popup */
-#lightbox {
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.8);
-  display: none;
-  justify-content: center;
-  align-items: center;
-  z-index: 999;
-}
-
-#lightbox img {
-  max-width: 90%;
-  max-height: 80%;
-  border-radius: 10px;
-  box-shadow: 0 0 20px #000;
-  animation: zoomIn 0.3s ease;
-}
-
-@keyframes zoomIn {
-  from { transform: scale(0.7); opacity: 0; }
-  to { transform: scale(1); opacity: 1; }
-}>
+  </style>
     <div id="lightbox" onclick="closeLightbox()">
   <img id="lightbox-img" src="" alt="Preview">
 </div>
@@ -151,7 +152,7 @@
 
 <section class="samples">
   <h2>Contoh Desain Kami</h2>
-  <div class="images/gallery">
+  <div class="gallery images">
     <img src="2.png" alt="Contoh Desain Logo">
     <img src="6.png" alt="Contoh Desain Logo">
     <img src="file_0000000012c461fd846d1eaf56445ed1.png" alt="Contoh Logo">
